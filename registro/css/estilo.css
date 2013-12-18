@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background-color:#006;
+	font-size:15px;
+}
+.contenedor{
+	padding:5px;
+	width:800px;
+	background-color:#FFF;
+	overflow:auto;
+	border-radius:10px;
+	}
+	
+.textUno{
+	width:100%;
+	text-align:center;
+	}
+
+.centrada{
+	border-radius: 5px;
+	padding:20px;
+	margin-top:auto;
+	width:550px;
+	background-color:#CFC;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -275px;
+	margin-top: -100px;
+	border-style: double;
+	border-color:#CCC;
+	}
+	
+.cent2{
+	border-radius: 5px;
+	padding:20px;
+	margin-top:auto;
+	width:550px;
+	background-color:#FC9294;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -275px;
+	margin-top: -100px;
+	border-style: double;
+	border-color:#CCC;
+	}
+	
+.recivo{
+	width:700px;
+	height:200px;
+	padding:20px;
+	border-radius:30px;
+	border:3px solid #000;
+	overflow:auto;
+	text-align:center;
+	}
+	
+.img1{
+	float:left;
+	width:110px;
+	height:130px;
+	border:0px;
+	}
+	
+.img3{
+	margin-left:20px;
+	float:left;
+	width:85px;
+	height:105px;
+	border:0px;
+	}
+
+.img2{
+	float:right;
+	width:120px;
+	height:90px;
+	border:0px;
+	}

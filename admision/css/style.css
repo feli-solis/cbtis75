@@ -1,0 +1,113 @@
+/*Correcting input text and textarea width*/
+input[type="text"], textarea,
+    input[type="password"] {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+select {
+	padding: 6px 4px;
+}
+
+form label:hover {
+	cursor: pointer;
+}
+
+form select:focus {
+	border: 1px solid #aaa;
+ 	color: #444;
+ 	-moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+	box-shadow:  0 0 3px rgba(0,0,0,.2);
+}
+
+form input[value="Siguiente"], form input[value="Buscar"] {
+	position: relative;
+	top: -2px;
+    width: 100%;
+}
+
+form input[value="Aceptar"] {
+    width: 70%;
+}
+
+form select[id="Nombre"], input[id="Direccion"],
+    input[id="Promedio_Sec"], input[id="Ex_Admision"],
+    input[id="Ex_Matematicas"], input[id="alumno"] {
+    width: 100%;	
+}
+
+form select[id="tipo"] {
+    width: 70%;
+}
+
+table td {
+    font-size: .82em;
+    padding: 4px 2px;
+}
+
+table {
+    margin: 0 auto;
+}
+.container {
+    background-color: rgba(255,255,255,.99);
+    border-radius: 5px;
+    padding-bottom: 40px;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.color-one {
+    background-color: #006;
+}
+
+body {
+    background-color: #006;
+}
+
+nav {
+    position: fixed;
+    z-index: 1;
+    background: rgba(255,255,255,0.75);
+    margin-top: 20px;
+}
+
+nav ul {
+    margin-bottom: 0;
+}
+
+nav ul li {
+    display: inline;
+    padding: right;
+    white-space: nowrap;
+}
+
+nav a, a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: #999999;
+}
+
+nav a:hover {
+    color: black;
+}
+
+
+table tr:last-child {
+    border-bottom: 1px solid #999999;
+}
+
+table td {
+    letter-spacing: -0.02em;
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+}
+/*Make the scrollbar always visible*/
+html {
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+}
