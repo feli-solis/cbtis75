@@ -49,7 +49,7 @@
 	<!-- Funcion que determina el numero de index en la lista y convertirla en en una lista circular con el boton -->
 	function combofunction(){
 	 <?php
-	 $conexion=mysql_connect('mysql.hostinger.es','u859503001_azael','azaeldg') or die('Conexion interrumpida');
+	 $conexion=mysql_connect('localhost','root','') or die('Conexion interrumpida');
 	 mysql_select_db('u859503001_base',$conexion);
 	 $buscar=mysql_query('select * from alumnos',$conexion);
 	 $contador=0;
@@ -89,6 +89,7 @@
 					<li><a href="consulta.php">Consulta</a></li>
 					<li><a href="resultado.php">Resultados</a></li>
 					<li><a href="registro_usuarios.php">Registro de Usuarios</a></li>
+					<li><a href="exportarBase.php">Exportar Base</a></li>
 				</ul>
 			</nav>
 			<hr class="remove-bottom" style="margin-top: 60px;"/>
