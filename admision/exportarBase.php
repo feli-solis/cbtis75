@@ -7,8 +7,8 @@
 
 <body>
 <?php 
-$conexion=mysql_connect('mysql.hostinger.es','u859503001_azael','azaeldg');
-mysql_select_db('u859503001_base');
+$conexion=mysql_connect('localhost','root','');
+mysql_select_db('cbtis75');
 $consulta=mysql_query('select * from alumnos');
 
 header("Content-type: application/vnd.ms-excel; name='excel'");
@@ -66,7 +66,7 @@ header("Expires: 0");
 <td bgcolor="#999999">Septima Opcion</td>
 </tr>
 <?php
-while($fila=mysql_fetch_array($consulta)){
+while($filap=mysql_fetch_array($consulta)){
 echo <<<html
 <tr>
 <td>{$filap['Clave']}</td>

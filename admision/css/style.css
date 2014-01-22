@@ -42,14 +42,22 @@ form select[id="tipo"] {
     width: 70%;
 }
 
-table td {
-    font-size: .82em;
-    padding: 4px 2px;
-}
-
 table {
     margin: 0 auto;
 }
+
+table tr:last-child {
+    border-bottom: 1px solid #999999;
+}
+
+table td {
+    font-size: .82em;
+    padding: 4px 2px;
+    letter-spacing: -0.02em;
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+}
+
 .container {
     background-color: rgba(255,255,255,.99);
     border-radius: 5px;
@@ -96,16 +104,6 @@ nav a:hover {
     color: black;
 }
 
-
-table tr:last-child {
-    border-bottom: 1px solid #999999;
-}
-
-table td {
-    letter-spacing: -0.02em;
-    border-left: 1px solid #999999;
-    border-right: 1px solid #999999;
-}
 /*Make the scrollbar always visible*/
 html {
     overflow: -moz-scrollbars-vertical; 

@@ -56,13 +56,14 @@ function imprSelec(muestra)
 					<li><a href="consulta.php">Consulta</a></li>
 					<li><a href="resultado.php">Resultados</a></li>
 					<li><a href="registro_usuarios.php">Registro de Usuarios</a></li>
+					<li><a href="exportarBase.php">Exportar Base de Datos</a></li>
 				</ul>
 			</nav>
 			<hr class="remove-bottom" style="margin-top: 60px;"/>
 			<h1 class="remove-bottom">CBTis 75</h1>
 			<h5>Version 0.5</h5>
 			<hr />
-		</div>
+		<!-- </div> -->
 
 <center>
 <?php
@@ -115,12 +116,12 @@ echo <<< HTML
 		</form>
 		<hr />
 		
-		<font size="2px">
 		<div id="muestra">
 HTML;
 
-$conexion=mysql_connect('mysql.hostinger.es','u859503001_azael','azaeldg');
-mysql_select_db('u859503001_base');
+$conexion=mysql_connect('localhost','root','');
+mysql_select_db('cbtis75');
+mysql_set_charset('utf8');
 $registros=mysql_query('select 
 				CONCAT(al.Apellido_Paterno," ",al.Apellido_Materno," ",al.Nombre) as Nombre ,
 				al.Primera_Opcion as op,
@@ -146,7 +147,7 @@ $registros=mysql_query('select
 				join admision as ad 
 				on al.Clave=ad.Clave 
 				ORDER BY Puntaje desc,zona desc, Nombre asc ');
-				echo '<center><h2>Puntaje de Alumnos</h2></cente>';
+				echo '<center><h2>Puntaje de Alumnos</h2></center>';
 				echo '<table border="1" id="Exportar_a_Excel">';
 				echo '<tr>';
 				
@@ -251,8 +252,8 @@ HTML;
 }
 ?>
 </div>
-</font> 
 </center>
+</div><!-- sixteen columns -->
 </div><!--container-->
 </div><!--wrapper-->
 </body>

@@ -50,7 +50,7 @@
 	function combofunction(){
 	 <?php
 	 $conexion=mysql_connect('localhost','root','') or die('Conexion interrumpida');
-	 mysql_select_db('u859503001_base',$conexion);
+	 mysql_select_db('cbtis75',$conexion);
 	 $buscar=mysql_query('select * from alumnos',$conexion);
 	 $contador=0;
 	 while($contar=mysql_fetch_array($buscar)){
@@ -89,7 +89,7 @@
 					<li><a href="consulta.php">Consulta</a></li>
 					<li><a href="resultado.php">Resultados</a></li>
 					<li><a href="registro_usuarios.php">Registro de Usuarios</a></li>
-					<li><a href="exportarBase.php">Exportar Base</a></li>
+					<li><a href="exportarBase.php">Exportar Base de Datos</a></li>
 				</ul>
 			</nav>
 			<hr class="remove-bottom" style="margin-top: 60px;"/>
@@ -106,10 +106,10 @@ HTML;
 			echo '<div class="eight columns">';
 				
 				//Conectamos con el servidor (servidor,user,pass)
-				$conexion=mysql_connect('mysql.hostinger.es','u859503001_azael','azaeldg') or die('Conexion interrumpida');
+				$conexion=mysql_connect('localhost','root','') or die('Conexion interrumpida');
 		
 				//Seleccionamos la base de datos u859503001_base
-				mysql_select_db('u859503001_base',$conexion);
+				mysql_select_db('cbtis75',$conexion);
 				
 			
 				//creea una consulta para acceder comparando el usuario y contraseña en la tabla usuarios

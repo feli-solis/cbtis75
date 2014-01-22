@@ -77,6 +77,7 @@ echo <<< HTML
 					<li><a href="consulta.php">Consulta</a></li>
 					<li><a href="resultado.php">Resultados</a></li>
 					<li><a href="registro_usuarios.php">Registro de Usuarios</a></li>
+					<li><a href="exportarBase.php">Exportar Base de Datos</a></li>
 				</ul>
 			</nav>
 			<hr class="remove-bottom" style="margin-top: 60px;"/>
@@ -174,8 +175,9 @@ HTML;
 			<hr />
 HTML;
 		
-$conexion=mysql_connect('mysql.hostinger.es','u859503001_azael','azaeldg');
-mysql_select_db('u859503001_base',$conexion);
+$conexion=mysql_connect('localhost','root','');
+mysql_select_db('cbtis75',$conexion);
+mysql_set_charset('utf8');
 $consulta=mysql_query('select * 
 from alumnos 
 where Nombre like "%'.$buscar.'%" 

@@ -43,6 +43,7 @@ echo <<< HTML
 					<li><a href="consulta.php">Consulta</a></li>
 					<li><a href="resultado.php">Resultados</a></li>
 					<li><a href="registro_usuarios.php">Registro de Usuarios</a></li>
+					<li><a href="exportarBase.php">Exportar Base de Datos</a></li>
 				</ul>
 			</nav>
 			<hr class="remove-bottom" style="margin-top: 60px;"/>
