@@ -37,7 +37,6 @@ header("Expires: 0");
 <td bgcolor="#999999">Colonia</td>
 <td bgcolor="#999999">Codigo Postal</td>
 <td bgcolor="#999999">Fecha de nacimiento</td>
-<td bgcolor="#999999">Municipio donde vive</td>
 <td bgcolor="#999999">Curp</td>
 <td bgcolor="#999999">Estado Civil</td>
 <td bgcolor="#999999">Tipo Sanguineo</td>
@@ -49,6 +48,7 @@ header("Expires: 0");
 <td bgcolor="#999999">Transporte</td>
 <td bgcolor="#999999">Costo del Transporte</td>
 <td bgcolor="#999999">Nombre de Secundaria</td>
+<td bgcolor="#999999">Direccion de Secundaria</td>
 <td bgcolor="#999999">Municipio de Secundaria</td>
 <td bgcolor="#999999">Estado de Secundaria</td>
 <td bgcolor="#999999">Tipo de Secundaria</td>
@@ -75,10 +75,10 @@ echo <<<html
 <td>{$filap['Apellido_Materno']}</td>
 <td>{$filap['Sexo']}</td>
 <td>{$filap['Edad']}</td>
-<td>{$filap['Municipio_Donde_Vive']}</td>
 <td>{$filap['Estado_Donde_Vive']}</td>
-<td>{$filap['Municipio_donde_Nacio']}</td>
+<td>{$filap['Municipio_Donde_Vive']}</td>
 <td>{$filap['Estado_donde_Nacio']}</td>
+<td>{$filap['Municipio_donde_Nacio']}</td>
 <td>{$filap['Peso']}</td>
 <td>{$filap['Estatura']}</td>
 <td>{$filap['Medida_de_la_Cintura']}</td>
