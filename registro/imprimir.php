@@ -66,7 +66,6 @@ while ( $fila = mysql_fetch_array($query)) {
 //html2fpdf
 $html= <<< HTML
 <page>
-  <page_header></page_header>
   <table border="1" rules="all">
     <tr>
       <th>Nombre(s)</th>
