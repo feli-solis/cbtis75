@@ -20,10 +20,10 @@ if(@$_SESSION['acceso']==1){
 
 if(@$_POST['clave']!=NULL){
 //Conectar con servidor
-$conexion=mysql_connect('localhost','root','') or die('Ups Algun dato esta incorrecto');
+$conexion=mysql_connect('localhost','u58905_Mario','Mario114mas') or die('Ups Algun dato esta incorrecto');
 
 //Conectar con la base
-mysql_select_db('cbtis75',$conexion);	
+mysql_select_db('u58905_cbtis75',$conexion);	
 mysql_set_charset('utf8');
 
 //Crear el Insert

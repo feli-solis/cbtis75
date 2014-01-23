@@ -15,10 +15,10 @@ if(@$_SESSION['prioridad']==2){
 	if(@$_POST['nombre']!=NULL and @$_POST['contrasena']!=NULL and @$_POST['correo']!=NULL and @$_POST['tipo']!=NULL){
 			
 		  //Conectamos con el Servidos
-		  $conexion=mysql_connect('mysql.hostinger.es','u859503001_azael','azaeldg') or die('Ups Algun dato esta incorrecto');
+		  $conexion=mysql_connect('localhost','u58905_Mario','Mario114mas') or die('Ups Algun dato esta incorrecto');
 		  
 		  //Seleccionamos la base de Datos
-		  mysql_select_db('u859503001_base',$conexion);
+		  mysql_select_db('u58905_cbtis75',$conexion);
 		  
 		  //Preparamos el Insert
 		  $insert="INSERT INTO usuarios(nombre,contrasena,Correo,prioridad) VALUES ('".@$_POST['nombre']."','".@$_POST['contrasena']."','".@$_POST['correo']."','".@$_POST['tipo']."')";

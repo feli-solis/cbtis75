@@ -23,10 +23,10 @@ $clave=@$_GET['clave'];
 
 if(@$_GET['clave']!=NULL){
   //Conectamos con el Servidos
-  $conexion=mysql_connect('localhost','root','') or die(mysql_error());
+  $conexion=mysql_connect('localhost','u58905_Mario','Mario114mas') or die(mysql_error());
   
   //Seleccionamos la base de Datos
-  mysql_select_db('cbtis75',$conexion);
+  mysql_select_db('u58905_cbtis75',$conexion);
   mysql_set_charset('utf8');
  
 $consulta=mysql_query("select * from alumnos where clave='".$clave."'",$conexion);
@@ -447,10 +447,10 @@ html;
 ?>
 
 <?php
-$conexion=mysql_connect('localhost','root','') or die('Ups Algun dato esta incorrecto');
+$conexion=mysql_connect('localhost','u58905_Mario','Mario114mas') or die('Ups Algun dato esta incorrecto');
   
   //Seleccionamos la base de Datos
-  mysql_select_db('cbtis75',$conexion);
+  mysql_select_db('u58905_cbtis75',$conexion);
   mysql_set_charset('utf8');
  
 $consulta=mysql_query("select * from alumnos where clave='".$clave."'",$conexion);

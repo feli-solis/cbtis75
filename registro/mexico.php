@@ -2,7 +2,7 @@
 
 require 'functions.php';
 
-$connection = connectToDB("localhost", "root", "", "mexico");
+$connection = connectToDB("localhost", "u58905_Mario", "Mario114mas", "u58905_mexico");
 
 if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
 	$action = $_REQUEST['action'];

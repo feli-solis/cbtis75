@@ -1,9 +1,9 @@
 <?php
 
 $host = "localhost";
-$user = "root";
-$password = "";
-$db = "mexico";
+$user = "u58905_Mario";
+$password = "Mario114mas";
+$db = "u58905_mexico";
 
 function connectToDB($host, $user, $password, $db){
 	$connection = mysql_connect($host, $user, $password);

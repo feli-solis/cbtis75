@@ -1,8 +1,8 @@
 <?php
 error_reporting(E_ALL); //Remove this line for production, it simply will allow php to display any errors
  
-$connection = mysql_connect("mysql.hostinger.es", "u859503001_az43l", "azaeldg");
-$db = "u859503001_base2";
+$connection = mysql_connect("localhost", "u58905_Mario", "Mario114mas");
+$db = "u58905_cbtis75";
 mysql_select_db($db, $connection);
 mysql_set_charset("utf8"); // Cotejamiento de BD: utf8_general_ci.
 

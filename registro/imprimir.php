@@ -1,7 +1,7 @@
 <?php
 
-mysql_connect('localhost', 'root', '');
-mysql_select_db('cbtis75');
+mysql_connect('localhost', 'u58905_Mario', 'Mario114mas');
+mysql_select_db('u58905_cbtis75');
 mysql_set_charset('utf8');
 $query = mysql_query('SELECT * FROM alumnos WHERE Curp ="'.$_GET["curp"].'"');
 

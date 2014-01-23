@@ -49,8 +49,8 @@
 	<!-- Funcion que determina el numero de index en la lista y convertirla en en una lista circular con el boton -->
 	function combofunction(){
 	 <?php
-	 $conexion=mysql_connect('localhost','root','') or die('Conexion interrumpida');
-	 mysql_select_db('cbtis75',$conexion);
+	 $conexion=mysql_connect('localhost','u58905_Mario','Mario114mas') or die('Conexion interrumpida');
+	 mysql_select_db('u58905_cbtis75',$conexion);
 	 $buscar=mysql_query('select * from alumnos',$conexion);
 	 $contador=0;
 	 while($contar=mysql_fetch_array($buscar)){
@@ -106,10 +106,10 @@ HTML;
 			echo '<div class="eight columns">';
 				
 				//Conectamos con el servidor (servidor,user,pass)
-				$conexion=mysql_connect('localhost','root','') or die('Conexion interrumpida');
+				$conexion=mysql_connect('localhost','u58905_Mario','Mario114mas') or die('Conexion interrumpida');
 		
 				//Seleccionamos la base de datos u859503001_base
-				mysql_select_db('cbtis75',$conexion);
+				mysql_select_db('u58905_cbtis75',$conexion);
 				
 			
 				//creea una consulta para acceder comparando el usuario y contraseña en la tabla usuarios

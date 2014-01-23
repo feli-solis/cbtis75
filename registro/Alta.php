@@ -14,10 +14,10 @@ body {
 <body>
 <?php
 //Conectar con servidor
-$conexion=mysql_connect('localhost','root','') or die('Ups Algun dato esta incorrecto');
+$conexion=mysql_connect('localhost','u58905_Mario','Mario114mas') or die('Ups Algun dato esta incorrecto');
 
 //Conectar con la base
-mysql_select_db('cbtis75',$conexion);	
+mysql_select_db('u58905_cbtis75',$conexion);	
 mysql_set_charset('utf8');
 
 //Crear el Insert
@@ -119,7 +119,7 @@ mysql_query($insert) or die('error al insertar');
 
 //Consultar el index de alumnos
 $rs = mysql_query('SELECT AUTO_INCREMENT as clave FROM information_schema.TABLES
-WHERE TABLE_SCHEMA = "cbtis75" 
+WHERE TABLE_SCHEMA = "u58905_cbtis75" 
 AND TABLE_NAME = "alumnos"',$conexion);
 $valor=mysql_result($rs,0)-1;
 

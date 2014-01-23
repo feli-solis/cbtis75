@@ -19,10 +19,10 @@ echo "<br><br><br><br><br><br><br>";
 $clave=$_GET['clave'];
 
   //Conectamos con el Servidos
-  $conexion=mysql_connect('mysql.hostinger.es','u859503001_azael','azaeldg') or die('Ups Algun dato esta incorrecto');
+  $conexion=mysql_connect('localhost','u58905_Mario','Mario114mas') or die('Ups Algun dato esta incorrecto');
   
   //Seleccionamos la base de Datos
-  mysql_select_db('u859503001_base',$conexion);
+  mysql_select_db('u58905_cbtis75',$conexion);
  
 $consulta=mysql_query("Delete From alumnos where Clave='".$clave."'",$conexion);
 
