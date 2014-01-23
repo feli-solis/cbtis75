@@ -65,6 +65,8 @@ while ( $fila = mysql_fetch_array($query)) {
 }
 //html2fpdf
 $html= <<< HTML
+<page>
+  <page_header></page_header>
   <table border="1" rules="all">
     <tr>
       <th>Nombre(s)</th>
@@ -106,16 +108,20 @@ $html= <<< HTML
     </tr>
 
     <tr>
-      <th>Correo Electronico</th>
-      <th>Estado de Nacimiento</th>
-      <th>Municipio de Nacimiento</th>
-      <th>Estado donde Vive</th>
+      <th colspan="2">Correo Electronico</th>
+      <th colspan="2">Estado de Nacimiento</th>
     </tr>
     <tr>
-      <td>$email</td>
-      <td>$estadon</td>
-      <td>$municipion</td>
-      <td>$estado</td>
+      <td colspan="2">$email</td>
+      <td colspan="2">$estadon</td>
+    </tr>
+    <tr>
+      <th colspan="2">Municipio de Nacimiento</th>
+      <th colspan="2">Estado donde Vive</th>
+    </tr>
+    <tr>
+      <td colspan="2">$municipion</td>
+      <td colspan="2">$estado</td>
     </tr>
 
     <tr>
@@ -131,8 +137,8 @@ $html= <<< HTML
       <th colspan="2">Codigo Postal</th>
     </tr>
     <tr>
-      <td>$colonia</td>
-      <td>$cp</td>
+      <td colspan="2">$colonia</td>
+      <td colspan="2">$cp</td>
     </tr>
 
     <tr>
@@ -162,23 +168,23 @@ $html= <<< HTML
     </tr>
 
     <tr>
-      <th>Estado Secundaria</th>
-      <th>Municipio Secundaria</th>
+      <th colspan="2">Estado Secundaria</th>
+      <th colspan="2">Municipio Secundaria</th>
     </tr>
 
     <tr>
-      <td>$estadosec</td>
-      <td>$municipiosec</td>
+      <td colspan="2">$estadosec</td>
+      <td colspan="2">$municipiosec</td>
     </tr>
 
     <tr>
-      <th>Nombre Secundaria</th>
-      <th>Domicilio Secundaria</th>
+      <th colspan="2">Nombre Secundaria</th>
+      <th colspan="2">Domicilio Secundaria</th>
     </tr>
 
     <tr>
-      <td>$nombresec</td>
-      <td>$domiciliosec</td>
+      <td colspan="2">$nombresec</td>
+      <td colspan="2">$domiciliosec</td>
     </tr>
 
     <tr>
@@ -212,8 +218,8 @@ $html= <<< HTML
       <th colspan="2">Segunda Opcion</th>
     </tr>
     <tr>
-      <td>$primera</td>
-      <td>$segunda</td>
+      <td colspan="2">$primera</td>
+      <td colspan="2">$segunda</td>
     </tr>
     
     <tr>
@@ -237,16 +243,16 @@ $html= <<< HTML
 
     <tr>
       <th colspan="2">Septima Opcion</th>
-      <th></th>
+      <th colspan="2"></th>
     </tr>
     
     <tr>
       <td colspan="2">$septima</td>
-      <td></td>
+      <td colspan="2"></td>
     </tr>
 
   </table>
-
+<page>
 HTML;
 require_once 'html2pdf_v4.03/html2pdf.class.php';
 $html2pdf = new HTML2PDF('P','A4','es');
