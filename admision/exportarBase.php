@@ -9,6 +9,7 @@
 <?php 
 $conexion=mysql_connect('localhost','root','');
 mysql_select_db('cbtis75');
+mysql_set_charset('utf8');
 $consulta=mysql_query('select * from alumnos');
 
 header("Content-type: application/vnd.ms-excel; name='excel'");
@@ -57,6 +58,7 @@ header("Expires: 0");
 <td bgcolor="#999999">Promedio de Secundaria</td>
 <td bgcolor="#999999">Boleta de secundaria</td>
 <td bgcolor="#999999">Certificado de Secundaria</td>
+<td bgcolor="#999999">Cedula de Aspirante SEG</td>
 <td bgcolor="#999999">Primera Opcion</td>
 <td bgcolor="#999999">Segunda Opcion</td>
 <td bgcolor="#999999">Tercera Opcion</td>
@@ -107,6 +109,7 @@ echo <<<html
 <td>{$filap['Promedio_de_Secundaria']}</td>
 <td>{$filap['Boleta_de_Secundaria']}</td>
 <td>{$filap['Certificado_de_Secundaria']}</td>
+<td>{$filap['Cedula_de_Aspirante_SEG']}</td>
 <td>{$filap['Primera_Opcion']}</td>
 <td>{$filap['Segunda_Opcion']}</td>
 <td>{$filap['Tercera_Opcion']}</td>

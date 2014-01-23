@@ -144,13 +144,30 @@ $('#estadosec').change(function(){
 		});
 	}
 });
-// function numbers(e){
-// 	tecla = (document.all) ? e.keyCode : e.which;
-// 	if(tecla == 8)
-// 		return true;
-// 	patron = /\d/;
-// 	te = String.fromCharCode(tecla);
-// 	return patron.test(te);
-// }
 
-//$('#form_registro').validate();
+/* Quick and dirty hack to force abide.js to add the data-invalid attribute
+to the select element if no valid option has been selected */
+$('#enviar').click(function(){
+	//console.log('#enviar clicked');
+	if($('#carrera1').val() == null){
+		$('#carrera1').val('');
+	}
+	if($('#carrera2').val() == null){
+		$('#carrera2').val('');
+	}
+	if($('#carrera3').val() == null){
+		$('#carrera3').val('');
+	}
+	if($('#carrera4').val() == null){
+		$('#carrera4').val('');
+	}
+	if($('#carrera5').val() == null){
+		$('#carrera5').val('');
+	}
+	if($('#carrera6').val() == null){
+		$('#carrera6').val('');
+	}
+	if($('#carrera7').val() == null){
+		$('#carrera7').val('');
+	}
+});

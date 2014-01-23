@@ -14,10 +14,11 @@ body {
 <body>
 <?php
 //Conectar con servidor
-$conexion=mysql_connect('mysql.hostinger.es','u859503001_azael','azaeldg') or die('Ups Algun dato esta incorrecto');
+$conexion=mysql_connect('localhost','root','') or die('Ups Algun dato esta incorrecto');
 
 //Conectar con la base
-mysql_select_db('u859503001_base',$conexion);	
+mysql_select_db('cbtis75',$conexion);	
+mysql_set_charset('utf8');
 
 //Crear el Insert
 $insert="INSERT INTO alumnos(
@@ -57,6 +58,7 @@ Regimen_de_Secundaria,
 Promedio_de_Secundaria,
 Boleta_de_Secundaria,
 Certificado_de_Secundaria,
+Cedula_de_Aspirante_SEG,
 Primera_Opcion,
 Segunda_Opcion,
 Tercera_Opcion,
@@ -89,7 +91,7 @@ VALUES (
 '".$_POST['ocupacion']."',
 '".$_POST['tel']."',
 '".$_POST['cel']."',
-'".$_POST['tiempo'].$_POST['tiempo_unidad']." / ".$_POST['distancia']."',
+'".$_POST['tiempo'].$_POST['tiempo_unidad']." / ".$_POST['distancia']." km',
 '".$_POST['transporte']."',
 '".$_POST['costo']."',
 '".$_POST['nombresec']."',
@@ -102,6 +104,7 @@ VALUES (
 '".$_POST['promedio']."',
 '".$_POST['boleta']."',
 '".$_POST['certificado']."',
+'".$_POST['cedula']."',
 '".$_POST['carrera1']."',
 '".$_POST['carrera2']."',
 '".$_POST['carrera3']."',
@@ -116,7 +119,7 @@ mysql_query($insert) or die('error al insertar');
 
 //Consultar el index de alumnos
 $rs = mysql_query('SELECT AUTO_INCREMENT as clave FROM information_schema.TABLES
-WHERE TABLE_SCHEMA = "u859503001_base" 
+WHERE TABLE_SCHEMA = "cbtis75" 
 AND TABLE_NAME = "alumnos"',$conexion);
 $valor=mysql_result($rs,0)-1;
 
@@ -128,11 +131,13 @@ mysql_query($insert2) or die('error al insertar');
 
 //Cerramos la base
 mysql_close($conexion);
+
+//header('location: imprimir.php?$_POST["curp"]');
 ?>
 
 <div class="centrada"><center>
 <img src="img/accept.png" width="16" height="16"  alt=""/> Listo
-<META HTTP-EQUIV='REFRESH' CONTENT='3;URL=index.html'>
+<META HTTP-EQUIV='REFRESH' CONTENT='3;URL=imprimir.php?curp=<?php echo $_POST["curp"];?>'>
 <meta http-equiv=Cache-Control CONTENT=no-cache>
 <meta http-equiv=Pragma CONTENT=no-cache>
 !!

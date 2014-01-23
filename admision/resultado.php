@@ -171,8 +171,16 @@ if($criterios==1 or $flag==0){
 					echo "<td bgcolor='#666666' align='center' style='color: #ffffff;'>".'TOTAL'."</td><strong>";
 				echo '</tr>';
 				
+				$admitido = 1;
 				while($imprimir=mysql_fetch_array($registros)){
-					echo '<tr>';
+					if($admitido <= 600){
+						$admitido++;
+						$colorad = "#B3F9C0";
+					}else{
+						$colorad = "#F3A0A0";
+					}
+
+					echo '<tr bgcolor='.$colorad.'>';
 if($especialidad==1){
 					echo "<td>".$imprimir['so']."</td>";
 }

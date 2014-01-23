@@ -20,10 +20,11 @@ if(@$_SESSION['acceso']==1){
 
 if(@$_POST['clave']!=NULL){
 //Conectar con servidor
-$conexion=mysql_connect('mysql.hostinger.es','u859503001_azael','azaeldg') or die('Ups Algun dato esta incorrecto');
+$conexion=mysql_connect('localhost','root','') or die('Ups Algun dato esta incorrecto');
 
 //Conectar con la base
-mysql_select_db('u859503001_base',$conexion);	
+mysql_select_db('cbtis75',$conexion);	
+mysql_set_charset('utf8');
 
 //Crear el Insert
 $insert="UPDATE alumnos
@@ -65,6 +66,7 @@ Regimen_de_Secundaria='".$_POST['regimensec']."',
 Promedio_de_Secundaria='".$_POST['promedio']."',
 Boleta_de_Secundaria='".$_POST['boleta']."',
 Certificado_de_Secundaria='".$_POST['certificado']."',
+Cedula_de_Aspirante_SEG='".$_POST['cedula']."',
 Primera_Opcion='".$_POST['carrera1']."',
 Segunda_Opcion='".$_POST['carrera2']."',
 Tercera_Opcion='".$_POST['carrera3']."',

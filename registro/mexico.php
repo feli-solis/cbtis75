@@ -2,7 +2,7 @@
 
 require 'functions.php';
 
-$connection = connectToDB("mysql.hostinger.es", "u859503001_az43l", "azaeldg", "u859503001_base2");
+$connection = connectToDB("localhost", "root", "", "mexico");
 
 if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
 	$action = $_REQUEST['action'];

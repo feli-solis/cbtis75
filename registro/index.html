@@ -245,7 +245,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>Tiempo y Distancia del CBTis75 a tu Casa</legend>
+          <legend>Tiempo y Distancia aproximados del CBTis75 a tu Casa</legend>
           <div class="row">
             <div class="large-3 columns">
               <label for="tiempo">Tiempo</label>
@@ -338,7 +338,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="large-3 columns">
+            <div class="large-2 columns">
               <label for="modalidadsec">Modalidad</label>
               <select name="modalidadsec" id="modalidadsec">
                 <option value="" disabled selected>Seleccionar</option>
@@ -346,7 +346,7 @@
                 <option value="Abierta">Abierta</option>
               </select>
             </div>
-            <div class="large-3 columns">
+            <div class="large-2 columns">
               <label for="regimensec">Régimen</label>
               <select name="regimensec" id="regimensec">
                 <option value="" disabled selected>Seleccionar</option>
@@ -370,9 +370,13 @@
                 <option value="NO">No</option>
               </select>
             </div>
-            <div class="large-2 columns">
+            <div class="large-1 columns">
               <label for="promedio">Promedio</label>
               <input type="number" name="promedio" id="promedio" pattern="number" step=".1" min="0" max="10">
+            </div>
+            <div class="large-3 columns">
+              <label for="cedula">Cédula de Aspirante SEG</label>
+              <input type="text" name="cedula" id="cedula" pattern="[a-z|A-Z|0-9]{1,8}" maxlength="8">
             </div>
           </div>
         </fieldset>
@@ -383,11 +387,11 @@
             <div class="large-12 columns">
               <div class="row">
                 <div class="large-2 columns">
-                  <label for="carrera1" class="right inline">Primera Opción</label>  
+                  <label for="carrera1" class="right inline">Primera Opción*</label>  
                 </div>
                 <div class="large-10 columns">
-                  <select name="carrera1" id="carrera1">
-                    <option value="" selected disabled>Seleccionar</option>
+                  <select name="carrera1" id="carrera1" required>
+                    <option value=" " selected disabled>Seleccionar</option>
                   </select>
                 </div>
               </div>
@@ -397,11 +401,11 @@
             <div class="large-12 columns">
               <div class="row">
                 <div class="large-2 columns">
-                  <label for="carrera2" class="right inline">Segunda Opción</label>  
+                  <label for="carrera2" class="right inline">Segunda Opción*</label>
                 </div>
                 <div class="large-10 columns">
-                  <select name="carrera2" id="carrera2">
-                    <option value="" selected disabled>Seleccionar</option>
+                  <select name="carrera2" id="carrera2" required>
+                    <option value=" " selected disabled>Seleccionar</option>
                   </select>
                 </div>
               </div>
@@ -411,11 +415,11 @@
             <div class="large-12 columns">
               <div class="row">
                 <div class="large-2 columns">
-                  <label for="carrera3" class="right inline">Tercera Opción</label>  
+                  <label for="carrera3" class="right inline">Tercera Opción*</label>  
                 </div>
                 <div class="large-10 columns">
-                  <select name="carrera3" id="carrera3">
-                    <option value="" selected disabled>Seleccionar</option>
+                  <select name="carrera3" id="carrera3" required>
+                    <option value=" " selected disabled>Seleccionar</option>
                   </select>
                 </div>
               </div>
@@ -425,11 +429,11 @@
             <div class="large-12 columns">
               <div class="row">
                 <div class="large-2 columns">
-                  <label for="carrera4" class="right inline">Cuarta Opción</label>  
+                  <label for="carrera4" class="right inline">Cuarta Opción*</label>  
                 </div>
                 <div class="large-10 columns">
-                  <select name="carrera4" id="carrera4">
-                    <option value="" selected disabled>Seleccionar</option>
+                  <select name="carrera4" id="carrera4" required>
+                    <option value=" " selected disabled>Seleccionar</option>
                   </select>
                 </div>
               </div>
@@ -439,11 +443,11 @@
             <div class="large-12 columns">
               <div class="row">
                 <div class="large-2 columns">
-                  <label for="carrera5" class="right inline">Quinta Opción</label>  
+                  <label for="carrera5" class="right inline">Quinta Opción*</label>  
                 </div>
                 <div class="large-10 columns">
-                  <select name="carrera5" id="carrera5">
-                    <option value="" selected disabled>Seleccionar</option>
+                  <select name="carrera5" id="carrera5" required>
+                    <option value=" " selected disabled>Seleccionar</option>
                   </select>
                 </div>
               </div>
@@ -453,11 +457,11 @@
             <div class="large-12 columns">
               <div class="row">
                 <div class="large-2 columns">
-                  <label for="carrera6" class="right inline">Sexta Opción</label>  
+                  <label for="carrera6" class="right inline">Sexta Opción*</label>  
                 </div>
                 <div class="large-10 columns">
-                  <select name="carrera6" id="carrera6">
-                    <option value="" selected disabled>Seleccionar</option>
+                  <select name="carrera6" id="carrera6" required>
+                    <option value=" " selected disabled>Seleccionar</option>
                   </select>
                 </div>
               </div>
@@ -467,11 +471,12 @@
             <div class="large-12 columns">
               <div class="row">
                 <div class="large-2 columns">
-                  <label for="carrera7" class="right inline">Séptima Opción</label>  
+                  <label for="carrera7" class="right inline">Séptima Opción*</label>  
                 </div>
                 <div class="large-10 columns">
-                  <select name="carrera7" id="carrera7">
-                    <option value="" selected disabled>Seleccionar</option>
+                  <select name="carrera7" id="carrera7" required>
+                    <option value=" " selected disabled>Seleccionar</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -480,7 +485,7 @@
 
          <div class="row">
           <div class="large-6 large-centered columns">
-            <input type="submit" class="button secondary expand" value="Enviar">
+            <input type="submit" id="enviar" class="button secondary expand" value="Enviar">
           </div>
         </div>
 

@@ -23,10 +23,11 @@ $clave=@$_GET['clave'];
 
 if(@$_GET['clave']!=NULL){
   //Conectamos con el Servidos
-  $conexion=mysql_connect('mysql.hostinger.es','u859503001_azael','azaeldg') or die(mysql_error());
+  $conexion=mysql_connect('localhost','root','') or die(mysql_error());
   
   //Seleccionamos la base de Datos
-  mysql_select_db('u859503001_base',$conexion);
+  mysql_select_db('cbtis75',$conexion);
+  mysql_set_charset('utf8');
  
 $consulta=mysql_query("select * from alumnos where clave='".$clave."'",$conexion);
 
@@ -359,7 +360,7 @@ echo <<< html
             </div>
           </div>
           <div class="row">
-            <div class="large-3 columns">
+            <div class="large-2 columns">
               <label for="modalidadsec">Modalidad</label>
               <select name="modalidadsec" id="modalidadsec">
 html;
@@ -377,7 +378,7 @@ html;
 echo <<< html
               </select>
             </div>
-            <div class="large-3 columns">
+            <div class="large-2 columns">
               <label for="regimensec">Régimen</label>
               <select name="regimensec" id="regimensec">
 html;
@@ -431,9 +432,13 @@ html;
 echo<<<html
               </select>
             </div>
-            <div class="large-2 columns">
+            <div class="large-1 columns">
               <label for="promedio">Promedio</label>
               <input type="number" name="promedio" id="promedio" pattern="number" step=".1" min="0" max="10" value="{$fila['Promedio_de_Secundaria']}">
+            </div>
+            <div class="large-3 columns">
+              <label for="cedula">Cédula de Aspirante SEG</label>
+              <input type="text" name="cedula" id="cedula" pattern="[a-z|A-Z|0-9]{1,8}" maxlength="8" value="{$fila['Cedula_de_Aspirante_SEG']}">
             </div>
           </div>
         </fieldset>
@@ -442,10 +447,11 @@ html;
 ?>
 
 <?php
-$conexion=mysql_connect('mysql.hostinger.es','u859503001_azael','azaeldg') or die('Ups Algun dato esta incorrecto');
+$conexion=mysql_connect('localhost','root','') or die('Ups Algun dato esta incorrecto');
   
   //Seleccionamos la base de Datos
-  mysql_select_db('u859503001_base',$conexion);
+  mysql_select_db('cbtis75',$conexion);
+  mysql_set_charset('utf8');
  
 $consulta=mysql_query("select * from alumnos where clave='".$clave."'",$conexion);
 
